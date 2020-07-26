@@ -4,9 +4,11 @@ author: "Anjana Ramesh"
 date: "7/26/2020"
 output:
   html_document:
+    self_contained: no
     keep_md : true
     df_print: paged
   pdf_document: default
+  
 ---
 
 ## Introduction
@@ -44,7 +46,8 @@ Questions to be answered:
 
 
 ```r
-knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, fig.width = 10, fig.height = 5,
+                      fig.keep = 'all', fig.path = 'figures\ ', dev = 'png')
 ```
 
 # Loading and Pre-Processing Data
@@ -111,7 +114,7 @@ g <- ggplot(totalStepsdf, aes(x = Steps)) +
 print(g)
 ```
 
-![](Reproducible-Research-Course-Project-1_files/figure-html/activityTotalSteps-1.png)<!-- -->
+![](figures activityTotalSteps-1.png)<!-- -->
 
 The mean of the total number of steps taken per day is:
 
@@ -161,7 +164,7 @@ da <- ggplot(averageActivitydf, mapping = aes(Interval, Mean)) +
 print(da)
 ```
 
-![](Reproducible-Research-Course-Project-1_files/figure-html/averageDailyActivity-1.png)<!-- -->
+![](figures averageDailyActivity-1.png)<!-- -->
 
 Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -241,7 +244,7 @@ p <- ggplot(totalImputedStepsdf, aes(x = dailySteps)) +
 print(p)
 ```
 
-![](Reproducible-Research-Course-Project-1_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](figures unnamed-chunk-3-1.png)<!-- -->
 
 The mean of the total number of steps taken per day is:
 
@@ -304,6 +307,6 @@ dayPlot <-  ggplot(activityByDay, aes(x = interval , y = steps, color = dayType)
 print(dayPlot) 
 ```
 
-![](Reproducible-Research-Course-Project-1_files/figure-html/activityByDay-1.png)<!-- -->
+![](figures activityByDay-1.png)<!-- -->
 
 -------------------------------------------------------------------------------------------------------
