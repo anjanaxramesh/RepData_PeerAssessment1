@@ -114,7 +114,7 @@ g <- ggplot(totalStepsdf, aes(x = Steps)) +
 print(g)
 ```
 
-[add plot](figures activityTotalSteps-1.png)
+![add plot](figure-html/activityTotalSteps-1.png)
 
 The mean of the total number of steps taken per day is:
 
@@ -164,7 +164,7 @@ da <- ggplot(averageActivitydf, mapping = aes(Interval, Mean)) +
 print(da)
 ```
 
-[add plot](figures averageDailyActivity-1.png)
+![add plot](figure-html/averageDailyActivity-1.png)
 
 Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -244,7 +244,7 @@ p <- ggplot(totalImputedStepsdf, aes(x = dailySteps)) +
 print(p)
 ```
 
-[add plot](figures unnamed-chunk-3-1.png)
+![add plot](figure-html/unnamed-chunk-3-1.png)
 
 The mean of the total number of steps taken per day is:
 
@@ -307,6 +307,6 @@ dayPlot <-  ggplot(activityByDay, aes(x = interval , y = steps, color = dayType)
 print(dayPlot) 
 ```
 
-[add plot](figures activityByDay-1.png)
+![add plot](figure-html/activityByDay-1.png)
 
 -------------------------------------------------------------------------------------------------------
